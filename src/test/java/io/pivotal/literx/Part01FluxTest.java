@@ -19,7 +19,6 @@ public class Part01FluxTest {
 	@Test
 	public void empty() {
 		Flux<String> flux = workshop.emptyFlux();
-
 		StepVerifier.create(flux)
 				.verifyComplete();
 	}
