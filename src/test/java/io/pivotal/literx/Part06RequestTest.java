@@ -72,7 +72,7 @@ public class Part06RequestTest {
 				.expectNextMatches(u -> true)
 				.expectNextMatches(u -> true)
 				.verifyComplete();
-
+//		originalConsole.println(logConsole.toString());
 		String log = logConsole.toString().replaceAll(threadInfos, "");
 		assertThat(log)
 				.contains("onSubscribe(FluxZip.ZipCoordinator)\n"
@@ -96,7 +96,7 @@ public class Part06RequestTest {
 				.verifyComplete();
 
 		assertThat(logConsole.toString())
-				.isEqualTo("Starring:\n"
+				.contains("Starring:\n"
 						+ "Skyler White\n"
 						+ "Jesse Pinkman\n"
 						+ "Walter White\n"
